@@ -1,0 +1,38 @@
+class Calculator {
+    constructor(a,b,action) {
+        this.a = a;
+        this.b = b;
+        this.action = action.toLowerCase();
+    }
+
+    claculate () {
+        switch(this.action){
+            case 'add':
+                return this.a + this.b;
+            
+            case 'sub':
+                return this.a - this.b;
+
+            case 'mul':
+                return this.a * this.b;
+
+            case 'div':
+                return this.a / this.b 
+                
+            default:
+                return "Invalid action"
+        }
+    }
+}
+
+const add = new Calculator(55,88,'add');
+console.log(add.claculate());
+
+const sub = new Calculator(100,25,'sub');
+console.log(sub.claculate());
+
+const mul = new Calculator(10,30,'mul');
+console.log(mul.claculate());
+
+const div = new Calculator(224,56, 'div');
+console.log(div.claculate());
