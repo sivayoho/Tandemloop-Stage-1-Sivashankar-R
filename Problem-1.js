@@ -1,12 +1,12 @@
 class Calculator {
-    constructor(a,b,action) {
+    constructor(a,b,operation) {
         this.a = a;
         this.b = b;
-        this.action = action.toLowerCase();
+        this.operation = operation.toLowerCase();
     }
 
     claculate () {
-        switch(this.action){
+        switch(this.operation){
             case 'add':
                 return this.a + this.b;
             
@@ -20,7 +20,7 @@ class Calculator {
                 return this.a / this.b 
                 
             default:
-                return "Invalid action"
+                return "Invalid operation"
         }
     }
 }
